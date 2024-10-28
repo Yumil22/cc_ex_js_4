@@ -16,7 +16,13 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
+    let sum = [];
+    for (let a = 0; a < numbers.length; a++) {
+        for (let b = a + 1; b < numbers.length; b++) {
+            sum.push(numbers[a] + numbers[b]);
+        }
+    }
+    sum.includes(target) ? res = true : res = false;
     /* Only make changes below this comment */
 
     return res;
