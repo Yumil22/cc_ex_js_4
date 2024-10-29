@@ -14,12 +14,20 @@
 
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const pairTheSum = (numbers, target) => {
-    let res = false;
     /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
+    const num_processed = [];
 
-    return res;
+    for (let i = 0; i < numbers.length; i++){
+        const num = numbers[i];
+        if(num_processed.includes(target - num)){
+            return true;
+        }
+
+        num_processed.push(num);
+    }
+
+    /* Only make changes below this comment */
+    return false;
 }
 
 
