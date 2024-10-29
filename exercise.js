@@ -16,9 +16,16 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
-
+    const JuntarNumeros = new Set();
+    /* Para cada numero de los numeros.. */
+    for (let number of numbers) {
+        const Completemento = target - number;
+        if (NumerosUtilizados.has(Completemento)) {
+            return true;
+        }
+        NumerosUtilizados.add(number);
+    }
+    return false;
     return res;
 }
 
