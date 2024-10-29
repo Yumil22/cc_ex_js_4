@@ -16,6 +16,21 @@
 const pairTheSum = (numbers, target) => {
     let res = false;
     /* Only make changes below this comment */
+
+    const neededNumbers = new Set(); // Conjunto para almacenar los números necesarios para alcanzar el target
+    
+    for (const num of numbers) {
+        const difference = target - num;
+        
+        // Si el número actual está en el conjunto econtramos un par válido
+        if (neededNumbers.has(num)) {
+            res = true;
+            break;
+        }
+        
+        // Agregar la diferencia al conjunto como el valor necesario para completar el target
+        neededNumbers.add(difference);
+    }
     
     /* Only make changes below this comment */
 
